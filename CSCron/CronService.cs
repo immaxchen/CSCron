@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -53,7 +53,7 @@ namespace CSCron
 
         public static void Logging(string content)
         {
-            File.AppendAllText(LogFile, string.Format("[{0:yyyy-MM-dd HH:mm:ss}] {1}\n", DateTime.Now, content));
+            File.AppendAllText(LogFile, string.Format("[{0:yyyy-MM-dd HH:mm:ss}] {1}{2}", DateTime.Now, content, Environment.NewLine));
         }
 
         public static void OpenCronFile()
